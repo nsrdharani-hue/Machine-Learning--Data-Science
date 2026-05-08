@@ -1,0 +1,77 @@
+Detection of Parkinson’s Disease from Biomedical Voice Patterns
+A comparative machine learning study using Gaussian Naive Bayes, Polynomial SVM, and Gradient Boosting to classify Parkinson’s disease from biomedical voice measurements [file:132]. This project uses the UCI Parkinson’s Disease dataset and evaluates how different supervised learning models perform on a real-world healthcare classification problem [file:132].
+Overview
+Parkinson’s disease is a progressive neurological disorder that affects motor control and speech production, making voice-based biomarkers a useful signal for early detection [file:132]. This project investigates whether machine learning models can distinguish between healthy individuals and Parkinson’s patients using acoustic voice features such as jitter, shimmer, harmonics-to-noise ratio, and pitch variation [file:132].
+Objectives
+•	Build a binary classification pipeline to predict Parkinson’s disease status from biomedical voice features [file:132].
+•	Compare the performance of Gaussian Naive Bayes, Support Vector Machine with polynomial kernel, and Gradient Boosting Machine [file:132].
+•	Apply preprocessing, stratified train-test splitting, and grid-based hyperparameter tuning to improve model quality [file:132].
+•	Evaluate model performance using accuracy, precision, recall, F1-score, and confusion matrices [file:132].
+Dataset
+This project uses the UCI Parkinson’s Disease Classification Dataset, which contains 195 voice recordings from 31 subjects, with 22 biomedical voice measurements and a binary target label indicating Parkinson’s disease status [file:132]. The dataset includes features related to:
+•	Jitter and pitch variation
+•	Shimmer and amplitude variation
+•	Harmonics-to-noise ratio
+•	Non-linear voice dynamics
+•	Fundamental frequency characteristics
+Methods
+Models Compared
+•	Gaussian Naive Bayes (GNB) [file:132]
+•	Support Vector Machine with Polynomial Kernel (SVM-Poly) [file:132]
+•	Gradient Boosting Machine (GBM) [file:132]
+Preprocessing and Training
+•	Standardised continuous features using z-score scaling [file:132]
+•	Split the data into 80% training and 20% testing using stratified sampling [file:132]
+•	Applied GridSearchCV with 5-fold cross-validation for SVM and GBM hyperparameter tuning [file:132]
+•	Evaluated results with classification metrics and confusion matrices [file:132]
+Results
+Model	Accuracy	Precision	Recall	F1-Score
+Gaussian Naive Bayes	0.846 [file:132]	0.85 [file:132]	0.83 [file:132]	0.84 [file:132]
+SVM Polynomial Kernel	0.897 [file:132]	0.90 [file:132]	0.87 [file:132]	0.88 [file:132]
+Gradient Boosting Machine	0.931 [file:132]	0.93 [file:132]	0.91 [file:132]	0.92 [file:132]
+
+Gradient Boosting delivered the best overall performance and produced the lowest number of false negatives, which is especially important in a healthcare screening context where missed diagnoses can delay treatment [file:132].
+Tech Stack
+•	Python
+•	Pandas
+•	NumPy
+•	scikit-learn
+•	Matplotlib
+•	Machine Learning
+•	Classification
+•	Model Evaluation
+•	GridSearchCV
+Repository Structure
+├── data/
+│   └── parkinsons.csv
+├── notebooks/
+│   └── parkinsons_analysis.ipynb
+├── src/
+│   ├── data_preprocessing.py
+│   ├── train_gnb.py
+│   ├── train_svm_poly.py
+│   ├── train_gbm.py
+│   └── evaluation.py
+├── outputs/
+│   ├── parkinsons_performance_table.csv
+│   ├── parkinsons_cm_gaussian_naive_bayes.csv
+│   ├── parkinsons_cm_svm_polynomial_kernel.csv
+│   └── parkinsons_cm_gradient_boosting_machine.csv
+└── README.md
+
+Key Skills Demonstrated
+•	Supervised machine learning for healthcare classification [file:132]
+•	Data preprocessing and feature scaling [file:132]
+•	Hyperparameter tuning with cross-validation [file:132]
+•	Performance evaluation using confusion matrices and F1-score [file:132]
+•	Comparative analysis of probabilistic, kernel-based, and ensemble models [file:132]
+Future Improvements
+•	Add SHAP-based model interpretability for feature importance analysis [file:132]
+•	Explore stacking and bagging methods to improve classification performance [file:132]
+•	Test deep learning approaches for speech-based diagnosis [file:132]
+•	Extend the pipeline with deployment-ready model inference scripts [file:132]
+Author
+Dharani Nagarajan
+MSc Data Science
+Coventry University [file:132]
+EOF && echo created
